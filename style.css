@@ -1,0 +1,104 @@
+/* block => cover full row, allow increase/descrease of width and height */
+/* inline => allow left and right, don't increase/descrease of width and height */
+/* inline-block => allow left and right, allow increase/descrease of width and height */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+#position .car1 {
+  height: 100px;
+  width: 140px;
+  background-color: red;
+  /* position: absolute; */
+}
+
+#position .car2 {
+  height: 110px;
+  width: 100px;
+  background-color: greenyellow;
+  /* position: absolute; */
+  /* top: 50%; */
+}
+
+#position .car3 {
+  height: 120px;
+  width: 100px;
+  background-color: blueviolet;
+  /* position: absolute; */
+}
+
+#position .bigBox {
+  height: 200px;
+  width: 200px;
+  background-color: red;
+  position: relative;
+  margin: 5px;
+}
+
+#position .smallBox {
+  height: 30px;
+  width: 30px;
+  background-color: yellow;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* position: fixed */
+
+#position h3 {
+  background-color: #F2B0EA;
+  padding: 10px;
+  margin: 5px;
+  display: inline-block;
+  border-radius: 50px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#background {
+  background-color: black;
+  height: calc(100vh - 640px);
+  border: 1px solid transparent;        /* This is important */
+}
+
+#box1 {
+  margin: 10px;
+  background-color: rgb(202, 88, 255);
+  width: calc(100vw - 20px);
+  height: calc(100vh - 660px);
+  position: relative;
+  border-radius: 20px;
+  border: 1px solid transparent;        /* This is important */
+}
+
+#nav {
+  height: 50px;
+  width: calc(100vw - 60px);
+  margin: 20px;
+  padding: 20px;
+  background-color: rgb(255, 255, 68);
+  color: black;
+  display: inline-block;
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.quick-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
